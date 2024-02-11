@@ -17,9 +17,6 @@ public class Conta {
 		
 		public void abrirConta () {
 			
-			int cc = 50, cp = 150;
-			
-			
 			System.out.println("\n digite o nome do dono da conta : ");
 				this.dono = ler.next();
 				
