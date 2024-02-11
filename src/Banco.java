@@ -9,7 +9,6 @@ public class Banco {
 		Scanner ler = new Scanner(System.in);
 		int opcao, contex;
 		
-		//eae painho
 		
 		//conta 1
 		do {
