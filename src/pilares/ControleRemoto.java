@@ -10,43 +10,63 @@ public class ControleRemoto {
 	
 	//metodos
 	
+
 	public void ligar() {
-		
+		this.setLigado(true);	
 	};
 	
 	public void desligar() {
-		
+		this.setLigado(false);
 	};
 	
 	public void abrirMenu() {
-		
+		System.out.println("-------MENU--------");
+		System.out.println("Esta ligado ?" + this.isLigado());
+		System.out.println("Esta tocando ? " + this.isTocando());
+		System.out.print("Volume " + this.getVolume() + "  ");
+		for (int i = 0; i <= this.getVolume(); i += 10 ) {
+			System.out.print("|");
+		}
 	};
 	
 	public void fecharMenu() {
-		
+		System.out.println("fechando volume...");
 	};
 	
 	public void maisVolume() {
-		
+		if (this.isLigado() == true) {
+			this.setVolume(this.getVolume() + 10);
+		}
 	};
 	
 	public void menosVolume() {
-		
-	};
+		if(this.isLigado() == true) {
+			this.setVolume(this.getVolume() - 10);
+		}
+	}
 	
 	public void ligarMudo() {
-		
+		if(this.isLigado() == true && this.getVolume() > 0) {
+			this.setVolume(0);
+		}
 	};
 	
 	public void desligarMudo() {
-		
+		if(this.isLigado() == true && this.getVolume() == 0) {
+			this.setVolume(50);
+		}
 	};
 	
 	public void play() {
-		
+		if (this.isLigado() && !(this.isTocando())) {
+			this.setTocando(true);
+		}
 	};
 	
 	public void pause() {
+		if (this.isLigado() && !(this.isTocando())) {
+			this.setTocando(false);
+		}
 		
 	}
 
@@ -55,38 +75,35 @@ public class ControleRemoto {
 	//construtor
 	
 	public ControleRemoto () {
-		this.setLigado(false);
+		this.setLigado(true);
 		this.setTocando(false);
 		this.setVolume(50);
 	}
 	
 	//getters e setters
 	
-	public int getVolume() {
+	private int getVolume() {
 		return volume;
 	}
 
-	public void setVolume(int volume) {
+	private void setVolume(int volume) {
 		this.volume = volume;
 	}
 
-	public boolean isLigado() {
+	private boolean isLigado() {
 		return ligado;
 	}
 
-	public void setLigado(boolean ligado) {
+	private void setLigado(boolean ligado) {
 		this.ligado = ligado;
 	}
 
-	public boolean isTocando() {
+	private boolean isTocando() {
 		return tocando;
 	}
 
-	public void setTocando(boolean tocando) {
+	private void setTocando(boolean tocando) {
 		this.tocando = tocando;
 	};
-	
-	
-	
 	
 }
