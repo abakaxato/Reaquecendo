@@ -9,6 +9,8 @@ public class Banco {
 		Scanner ler = new Scanner(System.in);
 		int opcao, contex;
 		
+		//eae painho
+		
 		//conta 1
 		do {
 			System.out.println("\n Olá, escolha uma das opçoes !\n \n 1 abrir uma nova conta \n 2 fechar uma conta"
