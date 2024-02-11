@@ -1,10 +1,11 @@
+package poo;
 import java.util.Scanner;
 
 public class Conta {
 	
 	//atributos
 	
-		public int numCont;
+		private int numCont;
 		protected String tipo;
 		private String dono;
 		private float saldo;

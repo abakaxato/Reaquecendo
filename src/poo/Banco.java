@@ -1,3 +1,4 @@
+package poo;
 import java.util.Scanner;
 
 public class Banco {
@@ -7,7 +8,7 @@ public class Banco {
 		Conta conta1 = new Conta();
 		Conta conta2 = new Conta();
 		Scanner ler = new Scanner(System.in);
-		int opcao, contex;
+		int opcao;
 		
 		
 		//conta 1
