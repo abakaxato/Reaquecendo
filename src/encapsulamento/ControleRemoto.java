@@ -1,6 +1,6 @@
-package pilares;
+package encapsulamento;
 
-public class ControleRemoto {
+public class ControleRemoto implements Controlador{
 
 	// Atributos
 	

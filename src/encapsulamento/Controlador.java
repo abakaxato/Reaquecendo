@@ -1,4 +1,4 @@
-package pilares;
+package encapsulamento;
 
 public interface Controlador{
 	

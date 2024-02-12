@@ -24,7 +24,7 @@ public class Conta {
 			
 			do {
 				System.out.println("\n digite 'cp' para conta poupança e 'cc' para conta corrente");
-				resposta = ler.nextLine();
+				resposta = ler.next();
 			} while (resposta.equals("cc") == false && resposta.equals("cp") == false); 
 			
 			this.setTipo(resposta);
@@ -44,7 +44,10 @@ public class Conta {
 		};
 		
 		public void fecharConta () {
-				if (this.getSaldo() != 0) {
+				
+			if (this.isStatus() == false) {
+				System.out.println("primeiro abra uma conta por favor");
+				}else if (this.getSaldo() != 0) {
 					System.out.println("sua conta não pode ser fechada por ainda conter saldo ou estar negativada");
 					System.out.println("por favor relize os ajustes e tente novamente");
 				} else if (this.getSaldo() == 0) {
@@ -79,13 +82,13 @@ public class Conta {
 			}
 		
 		public void sacar(float s) {
-			
-				System.out.println("\n OK, vamos sacar");
+				
 				if (this.isStatus() == false) {
-					System.out.println("primeiro abra uma conta por favor");
+					System.out.println("\n \n primeiro abra uma conta por favor");
 				} else if (this.getSaldo() == 0) {
-					System.out.println("adicone saldo a sua conta primeiro");
+					System.out.println("\n \n adicone saldo a sua conta primeiro");
 				} else {
+					System.out.println("\n OK, vamos sacar");
 					System.out.println("\n seu saldo em conta é : " + this.getSaldo());
 					System.out.println("\n digite o valor desejado para sacar");
 					s = ler.nextFloat();
@@ -121,11 +124,15 @@ public class Conta {
 		}
 
 		public void estadoAtual () {
-			System.out.println("\n o estado atual da sua conta é ");
-			System.out.println("\n dono : " + this.getDono());
-			System.out.println("\n numero da conta : " + this.getNumCont());
-			System.out.println("\n tipo de conta : "+ this.getTipo());
-			System.out.println("\n saldo atual : " + this.getSaldo());
+			if (this.isStatus() == false) {
+				System.out.println("primeiro abra uma conta por favor");
+				
+			}else{System.out.println("\n o estado atual da sua conta é ");
+				System.out.println("\n dono : " + this.getDono());
+				System.out.println("\n numero da conta : " + this.getNumCont());
+				System.out.println("\n tipo de conta : "+ this.getTipo());
+				System.out.println("\n saldo atual : " + this.getSaldo());
+			}
 		}
 				
 			
