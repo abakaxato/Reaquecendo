@@ -12,11 +12,5 @@ public class Lutadores {
 		l[5] = new Lutador("Nerdaard" , "EUA"     , 30, 1.81f, 105.7f,12, 2, 4);
 		l[5] = new Lutador("mamae", "groelandia", 90, 2.00f, 250.0f, 40, 0, 1);
 		
-		//apresentação dos competidores
-		
-		l[0].apresentar();
-		l[0].perderLuta();
-		l[0].status();
-		
 	}
 }
