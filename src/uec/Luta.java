@@ -13,7 +13,7 @@ public class Luta {
 	public void marcarLuta( Lutador l1, Lutador l2) {
 		if (l1.getCategoria() != l2.getCategoria()) {
 			System.out.println("os lutadores devem estar na mesma categoria");
-			desafiado = null;
+			this.desafiado = null;
 			desafiado = null;
 			aprovada = false;
 		}else if (l1 == l2){

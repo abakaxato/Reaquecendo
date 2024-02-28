@@ -143,8 +143,5 @@ public class Lutador {
 		this.setCategoria();
 	}
 	
-	
-	
-	
-	
+		
 }
