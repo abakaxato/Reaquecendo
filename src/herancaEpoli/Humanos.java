@@ -1,7 +1,7 @@
 package herancaEpoli;
 
 // esse aqui vai no freeStyle
-public class Humanos {
+public abstract class Humanos {
 	
 //Atributos		
 	protected int idade;
@@ -26,7 +26,7 @@ public float getAltura() {
 	return altura;
 }
 
-public void setAltura(float altura) {
+public final void setAltura(float altura) {
 	this.altura = altura;
 }
 
@@ -34,7 +34,7 @@ public float getPeso() {
 	return peso;
 }
 
-public void setPeso(float peso) {
+public final void setPeso(float peso) {
 	this.peso = peso;
 }
 
@@ -42,7 +42,7 @@ public String getNome() {
 	return nome;
 }
 
-public void setNome(String nome) {
+public final void setNome(String nome) {
 	this.nome = nome;
 }
 
