@@ -6,7 +6,7 @@ public class Principal {
     	try {
     	abrirArquivo();
     	}catch(AbrirArquivoExcecao e) {
-    	System.out.println("um erro ocorreu na tentativa de abrir o arquivo " + e.getMessage());
+    	System.out.println("um erro ocorreu na tentativa de abrir o arquivo : " + e.getMessage());
     	System.out.println("Causa raiz: " + e.getCause().getMessage());
     	}    	
     }
