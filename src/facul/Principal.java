@@ -4,28 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 public class Principal {
     public static void main ( String args [ ] ){
-    BufferedReader leitor = null;
-    try {
-    	//abrir arquivo
-    	leitor = new BufferedReader(new FileReader("entrada.txt"));
-    	//leitura do conteudo do arquivo
-    	String linha;
-    	while ((linha= leitor.readLine())!= null) {
-    		//processe cada linha do arquivo
-    		System.out.println(linha);
-    	}
-    }catch(IOException e) {
-    	//tratar uma exceção de IO
-    	System.out.println("Ocorreu um erro durante a leitura do arquivo: " + e.getMessage());
-    }finally {
-    	//fechamento do arquivo no bloco finally
+    	float valorTotal = 20, entrada = 10;
+    	int parcelas = 3;
     	try {
-    		if (leitor != null) {
-    			leitor.close();
-    		}
-    	}catch(IOException e) {
-    		System.out.println("Ocorrreu um erro durante o fechamento do arquivo: " + e.getMessage());
+    	Financiamento f = new Financiamento (valorTotal, entrada, parcelas);
+    	System.out.println(f.prestacoes());
+    	}catch(RuntimeException e){
+    		System.out.println(e.getMessage());
     	}
+    	
+    	
+    	
     }
-   }
 }
