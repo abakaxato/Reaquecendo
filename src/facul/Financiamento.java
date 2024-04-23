@@ -10,6 +10,8 @@ public class Financiamento {
 			throw new RuntimeException ("o valor da entrada deve ser pelo menos 20% do valor total");
 		}else if (parcelas < 4){
 			throw new RuntimeException ("o numero de parcelas deve ser maior do que 4");
+		}else if (valorTotal > 5000 ){
+			throw new RuntimeException("você não tem credito suficiente parceru");
 		}else {
 		this.valorTotal = valorTotal;
 		this.entrada = entrada;
